@@ -182,18 +182,18 @@ img {
   height: 100vh;
   transition-duration: 0s;
   transition: backdrop-filter 0.5s linear;
-  backdrop-filter: saturate(100%) blur(8px);
+  backdrop-filter: saturate(90%) blur(8px);
 }
 
 .welcomeContent h1 {
-	color: #DCDCDC;
-	font-size: 1.8em;
-	word-wrap: break-word;
-	text-align: center;
-	margin-top: auto;
-	display: flex;
-	letter-spacing: 0.05em;
-	text-shadow: 0.05em 0.075em 0.05em rgba(0, 0, 0, 0.7);
+  color: #DCDCDC;
+  font-size: 1.8em;
+  word-wrap: break-word;
+  text-align: center;
+  margin-top: auto;
+  display: flex;
+  letter-spacing: 0.05em;
+  text-shadow: 0.05em 0.075em 0.05em rgba(0, 0, 0, 0.7);
 }
 
 .welcomeContent .welcomeButton {

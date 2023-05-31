@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preload" href="./css/style.css" as="style" />
-    <link rel="preload" href="./img/background.webp" as="image" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="img/logo.webp">
     <link rel="canonical" href="https://tyrannyofash.moddinglinked.com">
@@ -14,16 +13,31 @@
     <script src="javascript.js"></script>
     <title>Tyranny of Ash</title>
     <meta name="keywords" content="Fallout New Vegas, FNV, Fallout NV, Fallout, New Vegas, Oblivion, TESIV, TES4, The Elder Scrolls, FO4, SSE, SkyrimSE, Skyrim Special Edition, Guide, Mod, Mods, Modding Guide, Bethesda, Stable, Performance, Fix, Help, DXVK, Fast, Easy, Tutorial, Mod Organizer, Nexus, Fallout 4, Skyrim, Tale of Two Wastelands">
-    <meta name="description" content="A fully modular, comprehensive, and regularly updated Fallout New Vegas modding guide that allows for any personal preference to be satisfied.">
+    <meta name="description" content="A fully modular, comprehensive, and regularly updated Morrowind guide that allows for any personal preference to be satisfied.">
     <meta http-equiv='content-language' content='en-us'>
     <meta name="twitter:card" value="summary_large_image">
     <meta property="og:site_name" content="ModdingLinked">
     <meta property="og:title" content="Tyranny of Ash">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://tyrannyofash.moddinglinked.com">
+    <meta property="og:url" content="https://tyrannyofash.moddinglinked.com/">
     <meta property="og:image" content="https://tyrannyofash.moddinglinked.com/img/card.webp">
-    <meta property="og:description" content="A fully modular, comprehensive, and regularly updated Fallout New Vegas modding guide that allows for any personal preference to be satisfied.">
+    <meta property="og:description" content="A fully modular, comprehensive, and regularly updated Morrowind guide that allows for any personal preference to be satisfied.">
 </head>
+
+<script>
+    window.addEventListener('load', setBackgroundByTime);
+
+    function setBackgroundByTime() {
+        const headerTitle = document.getElementById('headerTitle');
+        const button = document.getElementById('sideButton');
+        button.style.color = "rgba(0, 0, 0, 0.75)";
+        headerTitle.style.color = "rgba(0, 0, 0, 0.75)";
+        Array.from(headerLinks.children).forEach(child => {
+            child.style.color = "rgba(0, 0, 0, 0.75)";
+        });
+    }
+
+</script>
 
 <body>
     <style>
@@ -42,16 +56,14 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <img src="./img/logo.webp" alt="Logo">
-            <a href="./index.html"> Tyranny of Ash </a>
-            <div class="guideLinks">
-                <a href="https://vivanewvegas.moddinglinked.com" target="_blank" rel="nofollow">Fallout New Vegas </a>
-                <a href="https://thebestoftimes.moddinglinked.com" target="_blank" rel="nofollow">Tale of Two Wastelands </a>
-                <a href="https://themidnightride.moddinglinked.com" target="_blank" rel="nofollow">Fallout 4 </a>
-                <a href="https://dragonbornsfate.moddinglinked.com" target="_blank" rel="nofollow">Skyrim Special Edition </a>
-                <a href="https://gloryofcyrodiil.moddinglinked.com" target="_blank" rel="nofollow">Oblivion</a>
+            <a href="./index.html" id="headerTitle"> Tyranny of Ash </a>
+            <div class="guideLinks" id="headerLinks">
+                <a href="https://vivanewvegas.moddinglinked.com/" target="_blank" rel="nofollow">Fallout New Vegas </a>
+                <a href="https://themidnightride.moddinglinked.com/" target="_blank" rel="nofollow">Fallout 4 </a>
+                <a href="https://dragonbornsfate.moddinglinked.com/" target="_blank" rel="nofollow">Skyrim Special Edition </a>
+                <a href="https://gloryofcyrodiil.moddinglinked.com/" target="_blank" rel="nofollow">Oblivion</a>
             </div>
         </div>
-
         <!-- Left Sidebar -->
         <div id="sidenavLeft" class="transparent">
             <p>
@@ -59,19 +71,16 @@
                 <hr>
                 <ul>
                     <li>
-                        <a href="https://vivanewvegas.moddinglinked.com" target="_blank" rel="nofollow">Fallout New Vegas </a>
+                        <a href="https://vivanewvegas.moddinglinked.com/" target="_blank" rel="nofollow">Fallout New Vegas </a>
                     </li>
                     <li>
-                        <a href="https://thebestoftimes.moddinglinked.com" target="_blank" rel="nofollow">Tale of Two Wastelands </a>
+                        <a href="https://themidnightride.moddinglinked.com/" target="_blank" rel="nofollow">Fallout 4 </a>
                     </li>
                     <li>
-                        <a href="https://themidnightride.moddinglinked.com" target="_blank" rel="nofollow">Fallout 4 </a>
+                        <a href="https://dragonbornsfate.moddinglinked.com/" target="_blank" rel="nofollow">Skyrim Special Edition </a>
                     </li>
                     <li>
-                        <a href="https://dragonbornsfate.moddinglinked.com" target="_blank" rel="nofollow">Skyrim Special Edition </a>
-                    </li>
-                    <li>
-                        <a href="https://gloryofcyrodiil.moddinglinked.com" target="_blank" rel="nofollow">Oblivion</a>
+                        <a href="https://gloryofcyrodiil.moddinglinked.com/" target="_blank" rel="nofollow">Oblivion</a>
                     </li>
                 </ul>
             </div>
@@ -107,7 +116,7 @@
     </div>
     <div id="backdrop" class="welcomeContent">
         <h1 id="title">Welcome to Tyranny of Ash!</h1>
-        <a id="next" class="welcomeButton" href="./intro.html" onmouseover="titleGlow(1)" onmouseleave="titleGlow(0)"><strong>Get Started</strong></a><a href="./intro.html"></a>
+        <a id="next" class="welcomeButton" onmouseover="titleGlow(1)" onmouseleave="titleGlow(0)" rel="next"><strong>WiP lol</strong></a>
     </div>
 </body>
 

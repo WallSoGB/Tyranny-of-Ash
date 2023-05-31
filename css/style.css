@@ -184,8 +184,8 @@ img {
   transition: -webkit-backdrop-filter 0.5s linear;
   transition: backdrop-filter 0.5s linear;
   transition: backdrop-filter 0.5s linear, -webkit-backdrop-filter 0.5s linear;
-  -webkit-backdrop-filter: saturate(100%) blur(8px);
-          backdrop-filter: saturate(100%) blur(8px);
+  -webkit-backdrop-filter: saturate(90%) blur(8px);
+          backdrop-filter: saturate(90%) blur(8px);
 }
 
 .welcomeContent h1 {
